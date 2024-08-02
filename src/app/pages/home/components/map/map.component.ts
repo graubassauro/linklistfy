@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 
-
 @Component({
   selector: 'map',
   templateUrl: './map.component.html',
@@ -11,7 +10,8 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit {
   private map!: L.Map;
 
-  iconURL ='https://touchmile.blob.core.windows.net/clickwins/icons/marker-icon-2x.png';
+  iconURL =
+    'https://touchmile.blob.core.windows.net/clickwins/icons/marker-icon-2x.png';
 
   @Input() longitude: number = 0;
   @Input() latitude: number = 0;
@@ -19,10 +19,12 @@ export class MapComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    console.log(this.longitude, this.latitude);
     this.initMap(this.longitude, this.latitude);
   }
 
   private initMap(lon: number, lat: number): void {
+    console.log(lon, lat);
     this.map = L.map('map', {
       center: [lat, lon],
       zoom: 12,
