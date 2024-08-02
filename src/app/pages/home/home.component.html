@@ -1,0 +1,36 @@
+<main class="grid content content-center grid-cols-1 sm:grid-cols-2">
+  <!-- <main class="w-full flex flex-col justify-center items-center"> -->
+  <store-card
+    class="col-start-1 col-end-2"
+    *ngIf="data"
+    [name]="data.name"
+    [address]="data.address"
+    [imgUrl]="data.urlImage"
+    [social]="socialUrls"
+  ></store-card>
+
+  <map
+    *ngIf="data"
+    class="col-start-1 col-end-2"
+    [longitude]="data.longitude"
+    [latitude]="data.latitude"
+  ></map>
+
+  <app-reviews
+    class="col-start-1 col-end-2"
+    [storeName]="data.name"
+  ></app-reviews>
+
+  <content
+    *ngIf="data"
+    class="sm:col-start-2 sm:row-start-1 sm:-row-end-13"
+    [pdfUrl]="data.weeklySales"
+  ></content>
+  <getintouch
+    class="col-start-1 col-end-2"
+    [name]="data.name"
+    [phoneNumber]="data.phoneNumber"
+    [imgUrl]="data.urlImage"
+    [email]="data.email"
+  ></getintouch>
+</main>

@@ -1,0 +1,35 @@
+<section class="max-w-[615px] flex flex-col gap-6 p-4 font-bold">
+  <div class="w-full bg-white p-2 border-[#D9D8DA] border rounded-lg">
+    <p class="text-sm">Getting in touch with {{ name }}</p>
+    <p class="text-sm bold">{{ email }}</p>
+  </div>
+  <div class="w-full bg-white p-2 rounded-lg flex flex-col gap-2">
+    <div class="flex justify-between pb-4 border-b border-b-[#F4F5F6]">
+      <img
+        [src]="imgUrl"
+        alt="supermarket logo"
+        class="w-10 h-10 rounded-full"
+      />
+      <div class="block">
+        <p class="bold leading-3">{{ name }}</p>
+        <span class="text-[#AEAEB3] text-xs">Vegetable*Superfood*Grocery</span>
+        <p class="text-[#AEAEB3] mt-2 text-xs">Tap for hours, info and more</p>
+      </div>
+      <img
+        class="w-5 h-5"
+        src="https://touchmile.blob.core.windows.net/clickwins/icons/right.svg"
+        alt=""
+      />
+    </div>
+    <a
+      [href]="'tel:' + phoneNumber"
+      class="p-2 flex justify-center items-center gap-4 bg-[#1A181B] w-full text-white rounded-lg border-[#D9D8DA]"
+    >
+      <img
+        src="https://touchmile.blob.core.windows.net/clickwins/icons/WhatsappLogo-white.svg"
+        alt=""
+      />
+      Contact us
+    </a>
+  </div>
+</section>
