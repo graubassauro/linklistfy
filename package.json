@@ -12,6 +12,9 @@
       "node": ">=16.0.0 <20",
       "npm": "10.5.2"
     },
+    "overrides": {
+      "glob": "9.0.0"
+    },
   "private": true, 
   "dependencies": {
     "@angular/animations": "^18.1.0",
