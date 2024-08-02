@@ -3,7 +3,13 @@ import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   {
-    path: ':id',
+    path: "",
+    pathMatch: "full",
+    redirectTo: "/:id",
+  },
+
+  {
+    path: ":id",
     component: HomeComponent,
   },
 ];
