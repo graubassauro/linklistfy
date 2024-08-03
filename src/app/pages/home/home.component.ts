@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  data!: MerchantData;
+  data!: MerchantData ;
   id: string | null = null;
   socialUrls!: Social;
   errorMessage: string = '';
@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit {
         },
         error: (err) => {
           this.errorMessage = err;
-          console.log(err);
         },
       });
     }

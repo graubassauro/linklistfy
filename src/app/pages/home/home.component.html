@@ -16,8 +16,8 @@
     [latitude]="data.latitude"
   ></map>
 
-  <app-reviews
-    class="col-start-1 col-end-2"
+  <app-reviews 
+    class="col-start-1 col-end-2" *ngIf="data"
     [storeName]="data.name"
   ></app-reviews>
 
@@ -26,7 +26,7 @@
     class="sm:col-start-2 sm:row-start-1 sm:-row-end-13"
     [pdfUrl]="data.weeklySales"
   ></content>
-  <getintouch
+  <getintouch *ngIf="data"
     class="col-start-1 col-end-2"
     [name]="data.name"
     [phoneNumber]="data.phoneNumber"

@@ -11,7 +11,6 @@ export const appConfig: ApplicationConfig = {
       routes,
       withRouterConfig({
         onSameUrlNavigation: "reload",
-        useClass: PathLocationStrategy
       }),
     ),
   ],
