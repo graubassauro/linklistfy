@@ -4,10 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 export const routes: Routes = [
   {
     path: "",
-    pathMatch: "full",
-    redirectTo: "/:id",
+    component: HomeComponent,
   },
-
   {
     path: ":id",
     component: HomeComponent,
